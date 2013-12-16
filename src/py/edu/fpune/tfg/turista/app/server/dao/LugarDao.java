@@ -30,8 +30,8 @@ public class LugarDao {
 		ps.setString(4, lugar.getTelefono());
 		ps.setString(5, lugar.getDireccion());
 		ps.setString(6, lugar.getWeb());
-		ps.setDouble(7, lugar.getX());
-		ps.setDouble(8, lugar.getY());
+		ps.setDouble(7, lugar.getLatitud());
+		ps.setDouble(8, lugar.getLongitud());
 		ps.setInt(9, lugar.getCategoria().getId());
 		ps.setInt(10, 0);
 		ps.execute();
@@ -47,11 +47,16 @@ public class LugarDao {
 			l.setId(lugar.getId());
 			l.setNombre(rs.getString("nombre"));
 			l.setDescripcion(rs.getString("descripcion"));
-			l.setX(rs.getInt("x"));
-			l.setY(rs.getInt("y"));
+			l.setDireccion(rs.getString("direccion"));
+			l.setLatitud(rs.getDouble("x"));
+			l.setLongitud(rs.getDouble("y"));
 			Categoria c = new Categoria();
 			c.setId(rs.getInt("categoria"));
-			//TODO obtener categoria
+			if(c.getId()==1){
+				c.setDescripcion("Hoteles");
+			}else{
+				c.setDescripcion("Restaurantes");
+			}
 			l.setCategoria(c);
 			l.setRecomendacion(rs.getInt("recomendacion"));
 		}
@@ -69,10 +74,39 @@ public class LugarDao {
 			l.setId(rs.getInt("id"));
 			l.setNombre(rs.getString("nombre"));
 			l.setDescripcion(rs.getString("descripcion"));
-			l.setX(rs.getInt("x"));
-			l.setY(rs.getInt("y"));
+			l.setDireccion(rs.getString("direccion"));
+			l.setLatitud(rs.getDouble("x"));
+			l.setLongitud(rs.getDouble("y"));
 			l.setCategoria(c);
 			l.setRecomendacion(rs.getInt("recomendacion"));
+			lugares.add(l);
+		}
+		return lugares;
+	}
+	
+	public List<Lugar> obtenerTodos() throws SQLException{
+		List<Lugar> lugares = new ArrayList<Lugar>();
+		String sql = "SELECT * FROM lugares";
+		PreparedStatement ps = this.conexion.prepareStatement(sql);
+		ResultSet rs = ps.executeQuery();
+		while(rs.next()){
+			Lugar l = new Lugar();
+			l.setId(rs.getInt("id"));
+			l.setNombre(rs.getString("nombre"));
+			l.setDescripcion(rs.getString("descripcion"));
+			l.setDireccion(rs.getString("direccion"));
+			l.setLatitud(rs.getDouble("x"));
+			l.setLongitud(rs.getDouble("y"));
+			Categoria c = new Categoria();
+			c.setId(rs.getInt("categoria"));
+			if(c.getId()==1){
+				c.setDescripcion("Hoteles");
+			}else{
+				c.setDescripcion("Restaurantes");
+			}
+			l.setCategoria(c);
+			l.setRecomendacion(rs.getInt("recomendacion"));
+			lugares.add(l);
 		}
 		return lugares;
 	}

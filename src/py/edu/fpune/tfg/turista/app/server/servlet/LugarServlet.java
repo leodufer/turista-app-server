@@ -27,8 +27,8 @@ public class LugarServlet extends HttpServlet {
 		l.setEmail(request.getParameter("telefono"));
 		l.setDireccion(request.getParameter("direccion"));
 		l.setWeb(request.getParameter("web"));
-		l.setX(Double.parseDouble(request.getParameter("x")));
-		l.setY(Double.parseDouble(request.getParameter("y")));
+		l.setLatitud(Double.parseDouble(request.getParameter("x")));
+		l.setLongitud(Double.parseDouble(request.getParameter("y")));
 		Categoria c = new Categoria();
 		c.setId(Integer.parseInt(request.getParameter("categoria")));
 		l.setCategoria(c);

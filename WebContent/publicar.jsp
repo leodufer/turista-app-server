@@ -89,7 +89,7 @@
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="pages.html" class="navbar-brand">TuristaApp</a>
+          <a href="index.jsp" class="navbar-brand">TuristaApp</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -231,6 +231,6 @@
     </div>
   </body>
   
-  <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
 </html>

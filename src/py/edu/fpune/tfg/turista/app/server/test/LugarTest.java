@@ -22,8 +22,8 @@ public class LugarTest {
 		l.setTelefono("0078");
 		l.setDireccion("Direccion");
 		l.setWeb("web");
-		l.setX(123);
-		l.setY(123);
+		l.setLatitud(123);
+		l.setLongitud(123);
 		LugarDao ldao = new LugarDao();
 		ldao.insertar(l);
 	}

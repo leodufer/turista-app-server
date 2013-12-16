@@ -124,6 +124,6 @@
       </footer>
     </div>
   </body>
-  <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
 </html>

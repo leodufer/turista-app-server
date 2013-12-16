@@ -1,5 +1,8 @@
 package py.edu.fpune.tfg.turista.app.server.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Categoria {
 	private int id;
 	private String descripcion;

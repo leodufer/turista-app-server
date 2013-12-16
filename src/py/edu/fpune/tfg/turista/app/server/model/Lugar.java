@@ -2,6 +2,8 @@ package py.edu.fpune.tfg.turista.app.server.model;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement
 public class Lugar {
 	private int id;
 	private String nombre;
@@ -10,8 +12,8 @@ public class Lugar {
 	private String telefono;
 	private String web;
 	private String direccion;
-	private double x;
-	private double y;
+	private double latitud;
+	private double logitud;
 	private Categoria categoria;
 	private int recomendacion;
 	private List<Recurso> recursos;
@@ -34,17 +36,17 @@ public class Lugar {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	public double getX() {
-		return x;
+	public double getLatitud() {
+		return latitud;
 	}
-	public void setX(double x) {
-		this.x = x;
+	public void setLatitud(double x) {
+		this.latitud = x;
 	}
-	public double getY() {
-		return y;
+	public double getLongitud() {
+		return logitud;
 	}
-	public void setY(double y) {
-		this.y = y;
+	public void setLongitud(double y) {
+		this.logitud = y;
 	}
 	public Categoria getCategoria() {
 		return categoria;
