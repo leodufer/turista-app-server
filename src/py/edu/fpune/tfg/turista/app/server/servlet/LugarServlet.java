@@ -24,7 +24,7 @@ public class LugarServlet extends HttpServlet {
 		l.setNombre(request.getParameter("nombre"));
 		l.setDescripcion(request.getParameter("descripcion"));
 		l.setTelefono(request.getParameter("telefono"));
-		l.setEmail(request.getParameter("telefono"));
+		l.setEmail(request.getParameter("email"));
 		l.setDireccion(request.getParameter("direccion"));
 		l.setWeb(request.getParameter("web"));
 		l.setLatitud(Double.parseDouble(request.getParameter("x")));

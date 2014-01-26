@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>Turísta App Ciudad del Este</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 

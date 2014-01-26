@@ -21,7 +21,6 @@ public class LugaresService {
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Lugar> getAllJSON() throws SQLException, ClassNotFoundException{
 		LugarDao ldao = new LugarDao();
-		
 		return ldao.obtenerTodos();
 	}
 	

@@ -35,6 +35,8 @@ public class LugarDao {
 		ps.setInt(9, lugar.getCategoria().getId());
 		ps.setInt(10, 0);
 		ps.execute();
+		ps.close();
+		this.conexion.close();
 	}
 	public Lugar obtener(Lugar lugar) throws SQLException{
 		Lugar l = null;
@@ -48,6 +50,9 @@ public class LugarDao {
 			l.setNombre(rs.getString("nombre"));
 			l.setDescripcion(rs.getString("descripcion"));
 			l.setDireccion(rs.getString("direccion"));
+			l.setTelefono(rs.getString("telefono"));
+			l.setEmail(rs.getString("email"));
+			l.setWeb(rs.getString("web"));
 			l.setLatitud(rs.getDouble("x"));
 			l.setLongitud(rs.getDouble("y"));
 			Categoria c = new Categoria();
@@ -60,6 +65,9 @@ public class LugarDao {
 			l.setCategoria(c);
 			l.setRecomendacion(rs.getInt("recomendacion"));
 		}
+		ps.close();
+		rs.close();
+		this.conexion.close();
 		return l;
 	}
 	
@@ -75,12 +83,18 @@ public class LugarDao {
 			l.setNombre(rs.getString("nombre"));
 			l.setDescripcion(rs.getString("descripcion"));
 			l.setDireccion(rs.getString("direccion"));
+			l.setTelefono(rs.getString("telefono"));
+			l.setEmail(rs.getString("email"));
+			l.setWeb(rs.getString("web"));
 			l.setLatitud(rs.getDouble("x"));
 			l.setLongitud(rs.getDouble("y"));
 			l.setCategoria(c);
 			l.setRecomendacion(rs.getInt("recomendacion"));
 			lugares.add(l);
 		}
+		ps.close();
+		rs.close();
+		this.conexion.close();
 		return lugares;
 	}
 	
@@ -95,6 +109,9 @@ public class LugarDao {
 			l.setNombre(rs.getString("nombre"));
 			l.setDescripcion(rs.getString("descripcion"));
 			l.setDireccion(rs.getString("direccion"));
+			l.setTelefono(rs.getString("telefono"));
+			l.setEmail(rs.getString("email"));
+			l.setWeb(rs.getString("web"));
 			l.setLatitud(rs.getDouble("x"));
 			l.setLongitud(rs.getDouble("y"));
 			Categoria c = new Categoria();
@@ -108,6 +125,9 @@ public class LugarDao {
 			l.setRecomendacion(rs.getInt("recomendacion"));
 			lugares.add(l);
 		}
+		ps.close();
+		rs.close();
+		this.conexion.close();
 		return lugares;
 	}
 }

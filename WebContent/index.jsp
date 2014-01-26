@@ -1,9 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Turista App :: Ciudad del Este</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <link rel="stylesheet" href="bootstrap.min.css" media="screen">
     <!--link rel="stylesheet" href="../assets/css/bootswatch.min.css"-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
